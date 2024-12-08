@@ -60,7 +60,9 @@ app.post('/chat',async(req,res)=>{
     response: (response.content[0] as TextBlock)?.text
   });
 })
-app.listen(3000)
+app.listen(process.env.PORT||4000,()=>{
+  console.log("server connected")
+})
 
 
 
